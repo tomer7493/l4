@@ -2,10 +2,10 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/index.html')
+@app.route('/index1.html')
 @app.route('/')
 def hello():
-    return render_template("index.html")
+    return render_template("index1.html")
 
 @app.route('/fleece.html')
 def fleece():
