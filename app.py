@@ -1,5 +1,7 @@
 from flask import Flask, render_template
 
+from flask import jsonify, request
+
 app = Flask(__name__)
 
 @app.route('/index1.html')
@@ -19,7 +21,10 @@ def shoes():
 def jackets():
     return render_template("jackets.html")
 
-
+@app.route('/power/<int:nmb>'
+def power(nmb):
+    val= nmb **2
+    return jsonify({'data':val})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port = 5555)
