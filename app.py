@@ -27,7 +27,7 @@ def power(nmb):
     return jsonify({'data':val})
     
 @app.route('/plus/<int:nm>')
-def power(nm):
+def plus(nm):
     val= nm +1
     return jsonify({'data':val})
 
