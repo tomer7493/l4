@@ -23,13 +23,9 @@ def jackets():
 
 @app.route('/power/<int:nmb>')
 def power(nmb):
-    val= nmb **2
+    val = nmb ** 2
     return jsonify({'data':val})
     
-@app.route('/plus/<int:nm>')
-def plus(nm):
-    val= nm +1
-    return jsonify({'data':val})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port = 5555)
