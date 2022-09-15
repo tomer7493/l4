@@ -21,12 +21,12 @@ def shoes():
 def jackets():
     return render_template("jackets.html")
 
-@app.route('/power/<int:nmb>'
+@app.route('/power/<int:nmb>')
 def power(nmb):
     val= nmb **2
     return jsonify({'data':val})
     
-@app.route('/plus/<int:nm>'
+@app.route('/plus/<int:nm>')
 def power(nm):
     val= nm +1
     return jsonify({'data':val})
